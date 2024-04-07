@@ -1,0 +1,59 @@
+# Nom del lloc
+site_name: Unidad 13 - Vue-router
+
+# Carpeta amb el documents font
+docs_dir: 'md'
+
+# Carpeta on es generarà el lloc web (mkdocs build)
+site_dir: 'docs'
+
+# Adreça on s'executa el server local (mkdocs serve)
+dev_addr: localhost:4000
+
+# Navegació dels documents
+# nav:
+#   - Títol: Document.md
+nav:
+  - Introducción: introduccion.md
+  - Instalación y creación de rutas: instalacion.md
+  - Menús y saltos de ruta: menu.md
+  - Parámetros: parametros.md
+  - Bibliografía: biblio.md
+
+# Extenions
+markdown_extensions:
+  - admonition
+  - attr_list         # permet afegir atributs a les etiquetes html 
+  # pymdownx és una col·leccio per escritura tècnica. S'instal·la per defecte
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+
+# Tema a triar
+theme: 
+  name: material  # selecció del tema
+  palette:
+   # Boto que canvia a mode oscur
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Botó que canvia a mode clar
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # utilitats de copia de codi
+    - content.code.copy 
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer       # footer de la pagina, amb navegació
+    - navigation.top    # boto flotant de tornar a dalt 
+
+# Altres afegits
+plugins:
+  - search      # plugin del quadre cerca
